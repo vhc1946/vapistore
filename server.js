@@ -18,15 +18,9 @@ var testgitfun=()=>{
   var teststore = require('./store/storemaps/storemap.json').store.apps.VMT.wos;
   var testcon = new NEDBconnect({filename:path.join(__dirname,teststore.filename)},teststore.ensure);
   testcon.docs.loadDatabase();
-  testcon.INSERTdb({id:85}).then(
+  testcon.INSERTdb({id:88}).then(
     res=>{
-      console.log('HERE')
-      exec(`git add .`,(err,stdout,stderr)=>{
-        exec(`git commit -m "database add"`,(err,stdout,stderr)=>{
-          exec(`git push origin main`,(err,stdout,stderr)=>{
-
-          });
-        });
+      exec(`sh gitsetup.sh`,(err,stdout,stderr)=>{
       });
     }
   );
