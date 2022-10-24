@@ -87,6 +87,8 @@ http.createServer((req,res)=>{
                   res.write(JSON.stringify(rspak)); //write the result to the response
                   vapilogger.LOGrequestend(reqlog); //log the end of the request
                   res.end();
+                  exec(`sh gitsetup.sh`,(err,stdout,stderr)=>{
+                  });
               }
             );
           }else{//user not cleard
