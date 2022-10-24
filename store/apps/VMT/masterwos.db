@@ -1,3 +1,4 @@
+{"id":102,"name":"Chris","_id":"Mv3ijyl1x50ItNT5"}
 {"_id":"Up2bdeOhHUtD1kKK"}
 {"_id":"fTeBQKvL4lm6MS7b"}
 {"id":"2","name":"jesus","last":"jesus","_id":"fqsufUYBdgj0rP2k"}
@@ -8,5 +9,5 @@
 {"id":"1","name":"jesus","last":"christian","_id":"tDWTIfq0iSwW2Iu0"}
 {"id":7,"_id":"tfaHWXrACeTpMRSy"}
 {"id":5,"_id":"wMAhaqGeyWTs9qrW"}
-{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":true}}
 {"id":71,"_id":"weBfWQECB09Byy1a"}
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":true}}

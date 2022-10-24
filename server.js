@@ -14,19 +14,6 @@ var {AppStoreRouter,AppStore} = require('./bin/vapi-store.js');
 
 var {vapilogger,arequestlog}=require('./logger/db/logger-db.js');
 
-var testgitfun=()=>{
-  var teststore = require('./store/storemaps/storemap.json').store.apps.VMT.wos;
-  var testcon = new NEDBconnect({filename:path.join(__dirname,teststore.filename)},teststore.ensure);
-  testcon.docs.loadDatabase();
-  testcon.INSERTdb({id:88}).then(
-    res=>{
-      exec(`sh gitsetup.sh`,(err,stdout,stderr)=>{
-      });
-    }
-  );
-}
-//testgitfun();
-
 var vstore = LOADstoremap(path.join(__dirname,'store/apps'),path.join(__dirname,'store/storemaps/storemap.json'));
 
 var RouteVAPI = (url,pak) =>{
@@ -87,6 +74,7 @@ http.createServer((req,res)=>{
                   res.write(JSON.stringify(rspak)); //write the result to the response
                   vapilogger.LOGrequestend(reqlog); //log the end of the request
                   res.end();
+                  console.log('here')
                   exec(`sh gitsetup.sh`,(err,stdout,stderr)=>{
                   });
               }
