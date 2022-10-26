@@ -4,7 +4,7 @@ const path = require('path'),
       http = require('http');
 var {exec} = require('child_process');
 var {NEDBconnect}=require('./bin/storage/nedb-connector.js');
-var port = 8080; //port for local host
+var port = 5000; //port for local host
 
 var reqque=[];
 
